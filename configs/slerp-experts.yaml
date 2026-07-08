@@ -1,0 +1,16 @@
+# SLERP 合并：数学专家 + 代码专家，直接在两个专家之间插值
+slices:
+  - sources:
+      - model: meta-math/MetaMath-Mistral-7B
+        layer_range: [0, 32]
+      - model: beowolx/CodeNinja-1.0-OpenChat-7B
+        layer_range: [0, 32]
+
+merge_method: slerp
+base_model: meta-math/MetaMath-Mistral-7B   # 以数学专家为参考点
+
+parameters:
+  t:
+    - value: 0.5   # 各取一半
+
+dtype: float16
