@@ -1,0 +1,49 @@
+# ============================================================================
+# mergekit SLERP Configuration
+# ============================================================================
+# SLERP (Spherical Linear Interpolation) merges models by interpolating in
+# weight space. It operates on two models at a time. For three models,
+# perform a two-stage merge:
+#   1. SLERP base model with math expert → intermediate model
+#   2. SLERP intermediate with code expert → final model
+#
+# Usage:
+#   mergekit-yaml configs/slerp-merge.yaml output/ --lazy-unpickle
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# Stage 1: Merge base model (Mistral-7B) with math expert (MetaMath)
+# ----------------------------------------------------------------------------
+merge_method: slerp
+base_model: mistralai/Mistral-7B-v0.1
+
+slices:
+  - sources:
+      - model: mistralai/Mistral-7B-v0.1
+        layer_range: [0, 32]
+      - model: meta-math/MetaMath-Mistral-7B
+        layer_range: [0, 32]
+
+parameters:
+  t:
+    - value: 0.5   # interpolation ratio (0 = full base, 1 = full expert)
+
+dtype: float16
+
+# ----------------------------------------------------------------------------
+# Stage 2 (run after Stage 1):
+#   Merge Stage-1 output with code expert (CodeNinja)
+#
+#   merge_method: slerp
+#   base_model: <path-to-stage1-output>
+#   slices:
+#     - sources:
+#         - model: <path-to-stage1-output>
+#           layer_range: [0, 32]
+#         - model: beowolx/CodeNinja-1.0-OpenChat-7B
+#           layer_range: [0, 32]
+#   parameters:
+#     t:
+#       - value: 0.5
+#   dtype: float16
+# ----------------------------------------------------------------------------
