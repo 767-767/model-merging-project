@@ -1,0 +1,14 @@
+merge_method: ties
+dtype: float16
+base_model: /root/autodl-tmp/hf_cache/models--mistralai--Mistral-7B-v0.1/snapshots/27d67f1b5f57dc0953326b2601d68371d40ea8da
+
+models:
+  - model: /root/autodl-tmp/hf_cache/models--meta-math--MetaMath-Mistral-7B/snapshots/c4a2bb751735e8fb18a20e0c18619db7fe614e7b
+    parameters:
+      weight: 1.0
+  - model: /root/autodl-tmp/hf_cache/models--beowolx--CodeNinja-1.0-OpenChat-7B/snapshots/9934c04c767e6ae0f792712a060f02915391d4ec
+    parameters:
+      weight: 1.0
+
+parameters:
+  normalize: true
