@@ -12,7 +12,7 @@ venv/
 
 # 合并后的模型目录
 merged_experts/
-merged_ties/
+merged_ties_v2/
 merged_task_arith/
 
 # Python 缓存
