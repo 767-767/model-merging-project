@@ -1,0 +1,17 @@
+merge_method: ties
+dtype: float16
+base_model: ./base_with_code_tokenizer
+
+models:
+  - model: ./base_with_code_tokenizer
+    parameters:
+      weight: 1.0
+  - model: ./math_expert_with_code_tokenizer
+    parameters:
+      weight: 1.0
+  - model: /root/autodl-tmp/hf_cache/models--beowolx--CodeNinja-1.0-OpenChat-7B/snapshots/9934c04c767e6ae0f792712a060f02915391d4ec
+    parameters:
+      weight: 1.0
+
+parameters:
+  normalize: true

@@ -1,0 +1,17 @@
+# Task Arithmetic 合并（使用统一词表的模型）
+# - 移除了 base_model 在 models 列表中的重复声明
+# - 每个专家只声明一次，使用 weight 控制贡献度
+merge_method: task_arithmetic
+dtype: float16
+base_model: ./base_with_code_tokenizer
+
+models:
+  - model: ./math_expert_with_code_tokenizer
+    parameters:
+      weight: 0.5
+  - model: /root/autodl-tmp/hf_cache/models--beowolx--CodeNinja-1.0-OpenChat-7B/snapshots/9934c04c767e6ae0f792712a060f02915391d4ec
+    parameters:
+      weight: 0.5
+
+parameters:
+  normalize: true

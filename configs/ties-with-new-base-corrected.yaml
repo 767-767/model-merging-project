@@ -1,0 +1,20 @@
+# 修正后的 TIES 配置
+# - 移除 base_model 在 models 列表中的重复声明
+# - 为每个专家添加 density 参数 (0.3)
+# - 调整 weight 为 0.5
+merge_method: ties
+dtype: float16
+base_model: ./base_with_code_tokenizer
+
+models:
+  - model: ./math_expert_with_code_tokenizer
+    parameters:
+      weight: 0.5
+      density: 0.3
+  - model: /root/autodl-tmp/hf_cache/models--beowolx--CodeNinja-1.0-OpenChat-7B/snapshots/9934c04c767e6ae0f792712a060f02915391d4ec
+    parameters:
+      weight: 0.5
+      density: 0.3
+
+parameters:
+  normalize: true
