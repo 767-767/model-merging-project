@@ -14,6 +14,8 @@ venv/
 merged_experts/
 merged_ties_v2/
 merged_task_arith/
+merged_slerp_025/
+merged_slerp_075/
 
 # Python 缓存
 __pycache__/

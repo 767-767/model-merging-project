@@ -1,0 +1,12 @@
+slices:
+  - sources:
+      - model: meta-math/MetaMath-Mistral-7B
+        layer_range: [0, 32]
+      - model: beowolx/CodeNinja-1.0-OpenChat-7B
+        layer_range: [0, 32]
+merge_method: slerp
+base_model: meta-math/MetaMath-Mistral-7B
+parameters:
+  t:
+    - value: 0.75
+dtype: float16
