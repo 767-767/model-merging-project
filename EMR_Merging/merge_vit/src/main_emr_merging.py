@@ -26,7 +26,7 @@ def create_log_dir(path, filename='log.txt'):
 def apply_vector(vector, pretrained_checkpoint):#, scaling_coef=1.0):
     """Apply a task vector to a pretrained model."""
     with torch.no_grad():
-        pretrained_model = torch.load(pretrained_checkpoint)
+        pretrained_model = torch.load(pretrained_checkpoint, weights_only=False)
         new_state_dict = {}
         pretrained_state_dict = pretrained_model.state_dict()
         for key in pretrained_state_dict:
@@ -74,10 +74,10 @@ def emr_merge(task_vectors):
     return vector_unified, masks, rescalers
 
 
-
-exam_datasets = ['SUN397', 'Cars', 'RESISC45', 'EuroSAT', 'SVHN', 'GTSRB', 'MNIST', 'DTD'] # SUN397 | Cars | RESISC45 | EuroSAT | SVHN | GTSRB | MNIST | DTD
-model = 'ViT-B-32'
+#'SUN397', 'Cars', 'RESISC45', 'EuroSAT', 'SVHN', 'GTSRB', 'MNIST', 'DTD'
+exam_datasets = ['SVHN'] # SUN397 | Cars | RESISC45 | EuroSAT | SVHN | GTSRB | MNIST | DTD
 args = parse_arguments()
+model = args.model
 args.home = 'home/emr-merging' # type your home path here
 args.data_location = args.home + '/data'
 args.model = model

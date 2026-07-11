@@ -43,3 +43,8 @@ hf_cache/
 
 .autodl/
 *.zip
+
+# EMR模型权重与检查点、数据集
+EMR_Merging/merge_vit/checkpoints.tar.gz
+EMR_Merging/merge_vit/src/home/emr-merging/data/
+EMR_Merging/merge_vit/src/home/checkpoints/
