@@ -15,8 +15,10 @@ class TaskVector():
             assert pretrained_checkpoint is not None and finetuned_checkpoint is not None
             with torch.no_grad():
                 print('TaskVector:' + finetuned_checkpoint)
-                pretrained_state_dict = torch.load(pretrained_checkpoint, weights_only=False).state_dict()
-                finetuned_state_dict = torch.load(finetuned_checkpoint, weights_only=False).state_dict()
+                pretrained_data = torch.load(pretrained_checkpoint, map_location='cpu', weights_only=False)
+                finetuned_data = torch.load(finetuned_checkpoint, map_location='cpu', weights_only=False)
+                pretrained_state_dict = pretrained_data.state_dict() if hasattr(pretrained_data, 'state_dict') else pretrained_data
+                finetuned_state_dict = finetuned_data.state_dict() if hasattr(finetuned_data, 'state_dict') else finetuned_data
                 self.vector = {}
                 for key in pretrained_state_dict:
                     if pretrained_state_dict[key].dtype in [torch.int64, torch.uint8]:

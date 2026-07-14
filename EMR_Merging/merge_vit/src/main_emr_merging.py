@@ -74,30 +74,36 @@ def emr_merge(task_vectors):
     return vector_unified, masks, rescalers
 
 
-#'SUN397', 'Cars', 'RESISC45', 'EuroSAT', 'SVHN', 'GTSRB', 'MNIST', 'DTD'
-exam_datasets = ['SVHN'] # SUN397 | Cars | RESISC45 | EuroSAT | SVHN | GTSRB | MNIST | DTD
+merge_datasets = ["MNIST", "SVHN",'SUN397', 'Cars', 'RESISC45', 'EuroSAT','GTSRB','DTD']
+eval_datasets = ["MNIST", "SVHN"]
 args = parse_arguments()
 model = args.model
-args.home = 'home/emr-merging' # type your home path here
+args.home = '/root/autodl-tmp/EMR_Merging/merge_vit' # type your home path here
 args.data_location = args.home + '/data'
 args.model = model
 args.save = args.home + '/checkpoints/' + model
-args.logs_path = args.home + '/logs/' + model
+args.logs_path = '/root/autodl-tmp/EMR_Merging/merge_vit/src/home/emr-merging/logs/' + model
 args.batch_size = 16
+if args.train_dataset is not None:
+    if isinstance(args.train_dataset, list):
+        eval_datasets = args.train_dataset
+    else:
+        eval_datasets = [args.train_dataset]
+        
 pretrained_checkpoint = args.home + '/checkpoints/'+model+'/zeroshot.pt'
 
 str_time_ = time.strftime('%Y%m%d_%H%M%S', time.localtime(time.time()))
 log = create_log_dir(args.logs_path, 'log_{}_emr_merging.txt'.format(str_time_))
 
 task_vectors = [
-    TaskVector(pretrained_checkpoint, args.home + '/checkpoints/'+model+'/'+dataset_name+'/finetuned.pt') for dataset_name in exam_datasets
+    TaskVector(pretrained_checkpoint, args.home + '/checkpoints/'+model+'/'+dataset_name+'/finetuned.pt') for dataset_name in merge_datasets
 ]
 
 # merge models
 vector_unified, masks, rescalers = emr_merge(task_vectors)
 
 accs = []
-for i, dataset in enumerate(exam_datasets):
+for i, dataset in enumerate(eval_datasets):
     task_vector_recon = {}
     for n in vector_unified:
         task_vector_recon[n] =  vector_unified[n] * masks[n][i] * rescalers[i]

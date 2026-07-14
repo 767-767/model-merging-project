@@ -59,9 +59,9 @@ EMR_Merging/merge_vit/src/
 ```
 
 ### 运行示例
-在 src 目录下，使用以下命令对指定模型及数据集进行验证
+在 merge_vit 目录下，使用以下命令对指定模型及数据集进行验证
 
 ```bash
 # 示例：使用 ViT-B-16 在 SVHN 数据集上验证
-python main_emr_merging.py --model ViT-B-16 --train-dataset SVHN
+python -m src.main_emr_merging --model ViT-B-16 --train-dataset SVHN
 ```
