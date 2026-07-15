@@ -1,4 +1,4 @@
-import datasets.arrow_dataset
+import datasets
 from tqdm import tqdm
 import numpy
 from datasets import load_dataset, load_from_disk
@@ -42,7 +42,7 @@ def get_emr_merge_performance(args: argparse.Namespace, models_to_merge: list, t
     logger.info(f"configuration is {args}")
     merging_method = MergingMethod(merging_method_name='emr_merging')
 
-    merged_model = GPT2ForSequenceClassification.from_pretrained(pretrained_model_name_or_path=args.ckpt_path+'/gpt2').to(args.device)
+    merged_model = GPT2ForSequenceClassification.from_pretrained('gpt2').to(args.device)
     pretrained_model = copy.deepcopy(merged_model)
     pretrained_model.to('cpu')
     pretrained_param_dict = {param_name: param_value for param_name, param_value in
@@ -163,9 +163,7 @@ class TokenizedGLUE:
         super().__init__()
         self.tokenizer = tokenizer
 
-    def load_dataset(
-        self, name
-    ):
+    def load_dataset(self, name):
         glue_dataset_loaders = {
             "mrpc": self.load_mrpc_dataset,
             "mnli": self.load_mnli_dataset,
@@ -174,13 +172,11 @@ class TokenizedGLUE:
             "qnli": self.load_qnli_dataset,
             "qqp": self.load_qqp_dataset,
             "rte": self.load_rte_dataset,
-            # "wnli": load_wnli_dataset,
         }
         return glue_dataset_loaders[name]()
 
-
     def load_mrpc_dataset(self):
-        dataset = load_from_disk('/remote-home/yepeng2/cache/GLUE_DOWNLOAD/mrpc')
+        dataset = load_dataset("glue", "mrpc", cache_dir="./data/glue", trust_remote_code=True)
         dataset = dataset.map(
             partial(mrpc_tokenize_function, tokenizer=self.tokenizer),
             batched=True,
@@ -188,22 +184,8 @@ class TokenizedGLUE:
         )
         return dataset
 
-
     def load_rte_dataset(self):
-        dataset = load_from_disk('/remote-home/yepeng2/cache/GLUE_DOWNLOAD/rte')
-        # dataset = load_dataset("glue", "rte", cache_dir=cache_dir)
-        dataset = dataset.map(
-            # RTE has the same format as MRPC
-            partial(mrpc_tokenize_function, tokenizer=self.tokenizer),
-            batched=True,
-            remove_columns=["sentence1", "sentence2"],
-        )
-        return dataset
-
-
-    def load_wnli_dataset(self):
-        dataset = load_dataset("glue", "wnli", cache_dir=cache_dir)
-        # dataset = load_from_disk('/remote-home/yepeng2/cache/GLUE_DOWNLOAD/wnli')
+        dataset = load_dataset("glue", "rte", cache_dir="./data/glue", trust_remote_code=True)
         dataset = dataset.map(
             partial(mrpc_tokenize_function, tokenizer=self.tokenizer),
             batched=True,
@@ -211,10 +193,35 @@ class TokenizedGLUE:
         )
         return dataset
 
+    def load_cola_dataset(self):
+        dataset = load_dataset("glue", "cola", cache_dir="./data/glue", trust_remote_code=True)
+        dataset = dataset.map(
+            partial(cola_tokenize_function, tokenizer=self.tokenizer),
+            batched=True,
+            remove_columns=["sentence"],
+        )
+        return dataset
+
+    def load_sst2_dataset(self):
+        dataset = load_dataset("glue", "sst2", cache_dir="./data/glue", trust_remote_code=True)
+        dataset = dataset.map(
+            partial(cola_tokenize_function, tokenizer=self.tokenizer),
+            batched=True,
+            remove_columns=["sentence"],
+        )
+        return dataset
+
+    def load_qnli_dataset(self):
+        dataset = load_dataset("glue", "qnli", cache_dir="./data/glue", trust_remote_code=True)
+        dataset = dataset.map(
+            partial(qnli_tokenize_function, tokenizer=self.tokenizer),
+            batched=True,
+            remove_columns=["question", "sentence"],
+        )
+        return dataset
 
     def load_qqp_dataset(self):
-        dataset = load_dataset("glue", "qqp", cache_dir=cache_dir)
-        # dataset = load_from_disk('/remote-home/yepeng2/cache/GLUE_DOWNLOAD/qqp')
+        dataset = load_dataset("glue", "qqp", cache_dir="./data/glue", trust_remote_code=True)
         dataset = dataset.map(
             partial(qqp_tokenize_function, tokenizer=self.tokenizer),
             batched=True,
@@ -222,48 +229,12 @@ class TokenizedGLUE:
         )
         return dataset
 
-
     def load_mnli_dataset(self):
-        dataset = load_dataset("glue", "mnli",  cache_dir=cache_dir)
-        # dataset = load_from_disk('/remote-home/yepeng2/cache/GLUE_DOWNLOAD/mnli')
+        dataset = load_dataset("glue", "mnli", cache_dir="./data/glue", trust_remote_code=True)
         dataset = dataset.map(
             partial(mnli_tokenize_function, tokenizer=self.tokenizer),
             batched=True,
             remove_columns=["premise", "hypothesis"],
-        )
-        return dataset
-
-
-    def load_cola_dataset(self):
-        dataset = load_dataset("glue", "cola", cache_dir=cache_dir)
-        # dataset = load_from_disk('/remote-home/yepeng2/cache/GLUE_DOWNLOAD/cola')
-        dataset = dataset.map(
-            partial(cola_tokenize_function, tokenizer=self.tokenizer),
-            batched=True,
-            remove_columns=["sentence"],
-        )
-        return dataset
-
-
-    def load_sst2_dataset(self):
-        dataset = load_dataset("glue", "sst2", cache_dir=cache_dir)
-        # dataset = load_from_disk('/remote-home/yepeng2/cache/GLUE_DOWNLOAD/sst2')
-        print(dataset.column_names)
-        dataset = dataset.map(
-            partial(cola_tokenize_function, tokenizer=self.tokenizer),
-            batched=True,
-            remove_columns=["sentence"],
-        )
-        return dataset
-
-
-    def load_qnli_dataset(self):
-        # dataset = load_from_disk('/remote-home/yepeng2/cache/GLUE_DOWNLOAD/qnli')
-        dataset = load_dataset("glue", "qnli", cache_dir=cache_dir)
-        dataset = dataset.map(
-            partial(qnli_tokenize_function, tokenizer=self.tokenizer),
-            batched=True,
-            remove_columns=["question", "sentence"],
         )
         return dataset
 
@@ -288,7 +259,7 @@ if __name__ == "__main__":
                         help="name of the method to merge models",
                         choices=["emr_merging"])
     parser.add_argument("--gpu", type=int, default=2, help="number of gpu to use")
-    parser.add_argument('--ckpt_path', type=str, default='/remote-home/yepeng2/Mario/ckpts/gpt2',help="ckpt path")
+    parser.add_argument('--ckpt_path', type=str, default='./ckpts/gpt2', help="ckpt path")
 
     try:
         args = parser.parse_args()
@@ -299,7 +270,7 @@ if __name__ == "__main__":
     args.dataset_names = dataset_names
 
 
-    tokenizer = GPT2Tokenizer.from_pretrained(pretrained_model_name_or_path=args.ckpt_path+'/gpt2')
+    tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 
 
     tokenizer.model_max_length = 512
@@ -310,7 +281,7 @@ if __name__ == "__main__":
             tokenizer.pad_token = tokenizer.eos_token
 
     glue_data_loader = GLUEDataLoader(tokenizer=tokenizer)
-    pretrained_model = GPT2ForSequenceClassification.from_pretrained(pretrained_model_name_or_path=args.ckpt_path+'/gpt2').to('cpu')
+    pretrained_model = GPT2ForSequenceClassification.from_pretrained('gpt2').to('cpu')
 
 
     models = []

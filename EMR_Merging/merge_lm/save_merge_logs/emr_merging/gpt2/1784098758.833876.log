@@ -1,0 +1,90 @@
+2026-07-15 14:59:18,834 - root - INFO - ********** Run starts. **********
+2026-07-15 14:59:18,834 - root - INFO - configuration is Namespace(language_model_name='gpt2', batch_size=16, merging_method_name='emr_merging', gpu=0, ckpt_path='./ckpts/gpt2', device='cuda:0', dataset_names=['cola', 'sst2', 'mrpc', 'qqp', 'mnli', 'qnli', 'rte'], dataset_name='rte')
+2026-07-15 14:59:18,834 - root - INFO - configuration is Namespace(language_model_name='gpt2', batch_size=16, merging_method_name='emr_merging', gpu=0, ckpt_path='./ckpts/gpt2', device='cuda:0', dataset_names=['cola', 'sst2', 'mrpc', 'qqp', 'mnli', 'qnli', 'rte'], dataset_name='rte')
+2026-07-15 14:59:19,135 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/gpt2/resolve/main/config.json "HTTP/1.1 200 OK"
+2026-07-15 14:59:19,950 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/gpt2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-07-15 14:59:37,905 - datasets.load - ERROR - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'glue' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+2026-07-15 14:59:38,515 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/glue/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 14:59:38,801 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/nyu-mll/glue/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 14:59:38,972 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/datasets/nyu-mll/glue/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/README.md "HTTP/1.1 200 OK"
+2026-07-15 14:59:39,290 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/glue.py "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 14:59:39,630 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/nyu-mll/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/glue.py "HTTP/1.1 404 Not Found"
+2026-07-15 14:59:39,631 - huggingface_hub.utils._http - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-07-15 14:59:40,948 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/glue/glue.py "HTTP/1.1 200 OK"
+2026-07-15 14:59:41,030 - datasets.load - WARNING - Using the latest cached version of the dataset since glue couldn't be found on the Hugging Face Hub
+2026-07-15 14:59:41,031 - datasets.packaged_modules.cache.cache - WARNING - Found the latest cached dataset configuration 'cola' at data/glue/glue/cola/0.0.0/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c (last modified on Wed Jul 15 11:33:46 2026).
+2026-07-15 14:59:55,345 - root - INFO - acc on cola: 0.7277085185050964
+2026-07-15 14:59:56,994 - datasets.load - ERROR - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'glue' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+2026-07-15 14:59:58,021 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/glue/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 14:59:58,352 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/nyu-mll/glue/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 14:59:58,585 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/datasets/nyu-mll/glue/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/README.md "HTTP/1.1 200 OK"
+2026-07-15 14:59:58,904 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/glue.py "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 14:59:59,218 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/nyu-mll/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/glue.py "HTTP/1.1 404 Not Found"
+2026-07-15 14:59:59,927 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/glue/glue.py "HTTP/1.1 200 OK"
+2026-07-15 15:00:00,009 - datasets.load - WARNING - Using the latest cached version of the dataset since glue couldn't be found on the Hugging Face Hub
+2026-07-15 15:00:00,012 - datasets.packaged_modules.cache.cache - WARNING - Found the latest cached dataset configuration 'sst2' at data/glue/glue/sst2/0.0.0/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c (last modified on Wed Jul 15 12:15:29 2026).
+2026-07-15 15:00:48,048 - root - INFO - acc on sst2: 0.9025229215621948
+2026-07-15 15:00:49,695 - datasets.load - ERROR - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'glue' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+2026-07-15 15:00:50,262 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/glue/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 15:00:50,558 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/nyu-mll/glue/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 15:00:50,790 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/datasets/nyu-mll/glue/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/README.md "HTTP/1.1 200 OK"
+2026-07-15 15:00:51,094 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/glue.py "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 15:00:51,383 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/nyu-mll/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/glue.py "HTTP/1.1 404 Not Found"
+2026-07-15 15:00:52,279 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/glue/glue.py "HTTP/1.1 200 OK"
+2026-07-15 15:00:52,343 - datasets.load - WARNING - Using the latest cached version of the dataset since glue couldn't be found on the Hugging Face Hub
+2026-07-15 15:00:52,344 - datasets.packaged_modules.cache.cache - WARNING - Found the latest cached dataset configuration 'mrpc' at data/glue/glue/mrpc/0.0.0/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c (last modified on Wed Jul 15 12:15:48 2026).
+2026-07-15 15:01:01,098 - root - INFO - acc on mrpc: 0.7916666865348816
+2026-07-15 15:01:02,385 - datasets.load - ERROR - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'glue' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+2026-07-15 15:01:11,669 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/glue/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 15:01:11,982 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/nyu-mll/glue/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 15:01:12,113 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/datasets/nyu-mll/glue/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/README.md "HTTP/1.1 200 OK"
+2026-07-15 15:01:12,413 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/glue.py "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 15:01:12,748 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/nyu-mll/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/glue.py "HTTP/1.1 404 Not Found"
+2026-07-15 15:01:14,238 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/glue/glue.py "HTTP/1.1 200 OK"
+2026-07-15 15:01:14,318 - datasets.load - WARNING - Using the latest cached version of the dataset since glue couldn't be found on the Hugging Face Hub
+2026-07-15 15:01:14,320 - datasets.packaged_modules.cache.cache - WARNING - Found the latest cached dataset configuration 'qqp' at data/glue/glue/qqp/0.0.0/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c (last modified on Wed Jul 15 12:23:03 2026).
+2026-07-15 15:12:23,393 - root - INFO - acc on qqp: 0.8811278939247131
+2026-07-15 15:12:25,087 - datasets.load - ERROR - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'glue' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+2026-07-15 15:12:26,078 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/glue/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 15:12:26,689 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/nyu-mll/glue/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 15:12:26,817 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/datasets/nyu-mll/glue/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/README.md "HTTP/1.1 200 OK"
+2026-07-15 15:12:27,118 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/glue.py "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 15:12:27,476 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/nyu-mll/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/glue.py "HTTP/1.1 404 Not Found"
+2026-07-15 15:12:28,167 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/glue/glue.py "HTTP/1.1 200 OK"
+2026-07-15 15:12:28,248 - datasets.load - WARNING - Using the latest cached version of the dataset since glue couldn't be found on the Hugging Face Hub
+2026-07-15 15:12:28,250 - datasets.packaged_modules.cache.cache - WARNING - Found the latest cached dataset configuration 'mnli' at data/glue/glue/mnli/0.0.0/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c (last modified on Wed Jul 15 12:27:41 2026).
+2026-07-15 15:17:53,389 - root - INFO - acc on mnli: 0.8108218312263489
+2026-07-15 15:17:55,406 - datasets.load - ERROR - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'glue' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+2026-07-15 15:17:55,952 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/glue/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 15:17:56,246 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/nyu-mll/glue/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 15:17:56,482 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/datasets/nyu-mll/glue/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/README.md "HTTP/1.1 200 OK"
+2026-07-15 15:17:56,761 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/glue.py "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 15:17:57,090 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/nyu-mll/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/glue.py "HTTP/1.1 404 Not Found"
+2026-07-15 15:17:58,774 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/glue/glue.py "HTTP/1.1 200 OK"
+2026-07-15 15:17:58,841 - datasets.load - WARNING - Using the latest cached version of the dataset since glue couldn't be found on the Hugging Face Hub
+2026-07-15 15:17:58,843 - datasets.packaged_modules.cache.cache - WARNING - Found the latest cached dataset configuration 'qnli' at data/glue/glue/qnli/0.0.0/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c (last modified on Wed Jul 15 12:29:16 2026).
+2026-07-15 15:19:45,156 - root - INFO - acc on qnli: 0.8484349250793457
+2026-07-15 15:19:46,789 - datasets.load - ERROR - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'glue' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+2026-07-15 15:19:47,341 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/glue/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 15:19:47,637 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/nyu-mll/glue/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 15:19:47,886 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/datasets/nyu-mll/glue/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/README.md "HTTP/1.1 200 OK"
+2026-07-15 15:19:48,172 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/glue.py "HTTP/1.1 307 Temporary Redirect"
+2026-07-15 15:19:48,459 - httpx - INFO - HTTP Request: HEAD https://hf-mirror.com/datasets/nyu-mll/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/glue.py "HTTP/1.1 404 Not Found"
+2026-07-15 15:19:50,056 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/glue/glue.py "HTTP/1.1 200 OK"
+2026-07-15 15:19:50,125 - datasets.load - WARNING - Using the latest cached version of the dataset since glue couldn't be found on the Hugging Face Hub
+2026-07-15 15:19:50,127 - datasets.packaged_modules.cache.cache - WARNING - Found the latest cached dataset configuration 'rte' at data/glue/glue/rte/0.0.0/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c (last modified on Wed Jul 15 12:29:35 2026).
+2026-07-15 15:19:58,685 - root - INFO - acc on rte: 0.6642599105834961
