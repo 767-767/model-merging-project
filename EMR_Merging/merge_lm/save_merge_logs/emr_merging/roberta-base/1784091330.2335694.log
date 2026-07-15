@@ -1,0 +1,26 @@
+2026-07-15 12:55:30,233 - root - INFO - ********** Run starts. **********
+2026-07-15 12:55:30,233 - root - INFO - configuration is Namespace(language_model_name='roberta-base', merging_method_name='emr_merging', batch_size=64, gpu=0, device='cuda:0', dataset_names=['cola', 'sst2', 'mrpc', 'stsb', 'qqp', 'mnli', 'qnli', 'rte'])
+2026-07-15 12:55:56,965 - root - INFO - perform model merging method emr_merging:
+2026-07-15 12:55:56,966 - root - INFO - get performance...
+2026-07-15 12:56:00,328 - root - INFO - test performance on dataset cola: {'eval_loss': 0.8068, 'eval_model_preparation_time': 0.0039, 'eval_matthews_correlation': 0.3996, 'eval_runtime': 3.3518, 'eval_samples_per_second': 311.18, 'eval_steps_per_second': 5.072}
+2026-07-15 12:56:01,313 - root - INFO - perform model merging method emr_merging:
+2026-07-15 12:56:01,313 - root - INFO - get performance...
+2026-07-15 12:56:05,056 - root - INFO - test performance on dataset sst2: {'eval_loss': 0.2224, 'eval_model_preparation_time': 0.0039, 'eval_accuracy': 0.9335, 'eval_runtime': 3.7332, 'eval_samples_per_second': 233.581, 'eval_steps_per_second': 3.75}
+2026-07-15 12:56:05,811 - root - INFO - perform model merging method emr_merging:
+2026-07-15 12:56:05,811 - root - INFO - get performance...
+2026-07-15 12:56:08,866 - root - INFO - test performance on dataset mrpc: {'eval_loss': 0.4823, 'eval_model_preparation_time': 0.0039, 'eval_accuracy': 0.8627, 'eval_f1': 0.9034, 'eval_averaged_scores': 0.8831, 'eval_runtime': 3.0457, 'eval_samples_per_second': 133.959, 'eval_steps_per_second': 2.298}
+2026-07-15 12:56:09,521 - root - INFO - perform model merging method emr_merging:
+2026-07-15 12:56:09,521 - root - INFO - get performance...
+2026-07-15 12:56:13,280 - root - INFO - test performance on dataset stsb: {'eval_loss': 1.006, 'eval_model_preparation_time': 0.0038, 'eval_pearson': 0.8273, 'eval_spearmanr': 0.8282, 'eval_averaged_scores': 0.8277, 'eval_runtime': 3.7488, 'eval_samples_per_second': 400.125, 'eval_steps_per_second': 6.402}
+2026-07-15 12:56:13,611 - root - INFO - perform model merging method emr_merging:
+2026-07-15 12:56:13,611 - root - INFO - get performance...
+2026-07-15 12:56:37,148 - root - INFO - test performance on dataset qqp: {'eval_loss': 0.664, 'eval_model_preparation_time': 0.004, 'eval_accuracy': 0.8972, 'eval_f1': 0.8628, 'eval_averaged_scores': 0.88, 'eval_runtime': 23.5258, 'eval_samples_per_second': 1718.54, 'eval_steps_per_second': 26.864}
+2026-07-15 12:56:38,398 - root - INFO - perform model merging method emr_merging:
+2026-07-15 12:56:38,398 - root - INFO - get performance...
+2026-07-15 12:56:47,626 - root - INFO - test performance on dataset mnli: {'eval_loss': 0.9276, 'eval_model_preparation_time': 0.0032, 'eval_accuracy': 0.8545, 'eval_runtime': 9.2186, 'eval_samples_per_second': 1064.698, 'eval_steps_per_second': 16.705}
+2026-07-15 12:56:48,602 - root - INFO - perform model merging method emr_merging:
+2026-07-15 12:56:48,603 - root - INFO - get performance...
+2026-07-15 12:56:55,093 - root - INFO - test performance on dataset qnli: {'eval_loss': 0.2574, 'eval_model_preparation_time': 0.0032, 'eval_accuracy': 0.8957, 'eval_runtime': 6.4826, 'eval_samples_per_second': 842.718, 'eval_steps_per_second': 13.266}
+2026-07-15 12:56:55,909 - root - INFO - perform model merging method emr_merging:
+2026-07-15 12:56:55,909 - root - INFO - get performance...
+2026-07-15 12:56:59,375 - root - INFO - test performance on dataset rte: {'eval_loss': 0.5376, 'eval_model_preparation_time': 0.0031, 'eval_accuracy': 0.7437, 'eval_runtime': 3.4577, 'eval_samples_per_second': 80.11, 'eval_steps_per_second': 1.446}

@@ -27,8 +27,6 @@ __pycache__/
 *.pyc
 *.pyo
 
-# 日志文件
-*.log
 
 # IDE 配置
 .vscode/
@@ -51,3 +49,8 @@ EMR_Merging/merge_vit/logs/
 EMR_Merging/merge_vit/src/home/emr-merging/data/
 EMR_Merging/merge_vit/src/home/emr-merging/checkpoints/
 EMR_Merging/merge_vit/debug_load.py
+
+# 合并模型目录
+EMR_Merging/*/checkpoints/
+EMR_Merging/*/ckpts/
+EMR_Merging/merge_lm/data/

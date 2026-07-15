@@ -1,0 +1,2 @@
+2026-07-15 12:29:35,348 - root - INFO - ********** Run starts. **********
+2026-07-15 12:29:35,348 - root - INFO - configuration is Namespace(language_model_name='roberta-base', merging_method_name='emr_merging', batch_size=64, gpu=2, device='cpu', dataset_names=['cola', 'sst2', 'mrpc', 'stsb', 'qqp', 'mnli', 'qnli', 'rte'])

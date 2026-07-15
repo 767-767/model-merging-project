@@ -1,0 +1,205 @@
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+/root/miniconda3/lib/python3.10/site-packages/transformers/utils/hub.py:128: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+/root/miniconda3/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+/root/autodl-tmp/EMR_Merging/merge_lm/utils/customized_trainers.py:15: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomizedTrainer.__init__`. Use `processing_class` instead.
+  super(CustomizedTrainer, self).__init__(*args, **kwargs)
+/root/autodl-tmp/EMR_Merging/merge_lm/utils/customized_trainers.py:15: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomizedTrainer.__init__`. Use `processing_class` instead.
+  super(CustomizedTrainer, self).__init__(*args, **kwargs)
+/root/autodl-tmp/EMR_Merging/merge_lm/utils/customized_trainers.py:15: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomizedTrainer.__init__`. Use `processing_class` instead.
+  super(CustomizedTrainer, self).__init__(*args, **kwargs)
+/root/autodl-tmp/EMR_Merging/merge_lm/utils/customized_trainers.py:15: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomizedTrainer.__init__`. Use `processing_class` instead.
+  super(CustomizedTrainer, self).__init__(*args, **kwargs)
+/root/autodl-tmp/EMR_Merging/merge_lm/utils/customized_trainers.py:15: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomizedTrainer.__init__`. Use `processing_class` instead.
+  super(CustomizedTrainer, self).__init__(*args, **kwargs)
+/root/autodl-tmp/EMR_Merging/merge_lm/utils/customized_trainers.py:15: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomizedTrainer.__init__`. Use `processing_class` instead.
+  super(CustomizedTrainer, self).__init__(*args, **kwargs)
+/root/autodl-tmp/EMR_Merging/merge_lm/utils/customized_trainers.py:15: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomizedTrainer.__init__`. Use `processing_class` instead.
+  super(CustomizedTrainer, self).__init__(*args, **kwargs)
+/root/autodl-tmp/EMR_Merging/merge_lm/utils/customized_trainers.py:15: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomizedTrainer.__init__`. Use `processing_class` instead.
+  super(CustomizedTrainer, self).__init__(*args, **kwargs)
+INFO:root:********** Run starts. **********
+INFO:root:configuration is Namespace(language_model_name='roberta-base', merging_method_name='emr_merging', batch_size=64, gpu=0, device='cuda:0', dataset_names=['cola', 'sst2', 'mrpc', 'stsb', 'qqp', 'mnli', 'qnli', 'rte'])
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at roberta-base and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/root/autodl-tmp/EMR_Merging/merge_lm/utils/customized_trainers.py:15: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomizedTrainer.__init__`. Use `processing_class` instead.
+  super(CustomizedTrainer, self).__init__(*args, **kwargs)
+INFO:root:perform model merging method emr_merging:
+INFO:root:get performance...
+  0%|          | 0/17 [00:00<?, ?it/s] 53%|█████▎    | 9/17 [00:00<00:00, 82.38it/s]DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/metrics/evaluate-metric/glue/evaluate-metric/glue.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): hf-mirror.com:443
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /spaces/evaluate-metric/glue/resolve/v0.4.6/glue.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): hf-mirror.com:443
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /spaces/evaluate-metric/glue/resolve/main/glue.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /api/resolve-cache/spaces/evaluate-metric/glue/e1a5d749a1772a37a8b68348d29f314a000d7907/glue.py?%2Fspaces%2Fevaluate-metric%2Fglue%2Fresolve%2Fmain%2Fglue.py=&etag=%228c607bf1e2fef42fa3abcf1c672c90b576e6eef0%22 HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 139994235010496 on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Lock 139994235010496 acquired on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Attempting to release lock 139994235010496 on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Lock 139994235010496 released on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Attempting to acquire lock 139994235290384 on /root/autodl-tmp/hf_cache/metrics/glue/cola/default_experiment-1-0.arrow.lock
+DEBUG:filelock:Lock 139994235290384 acquired on /root/autodl-tmp/hf_cache/metrics/glue/cola/default_experiment-1-0.arrow.lock
+DEBUG:fsspec.local:open file: /root/autodl-tmp/hf_cache/metrics/glue/cola/default_experiment-1-0.arrow
+DEBUG:filelock:Attempting to release lock 139994235290384 on /root/autodl-tmp/hf_cache/metrics/glue/cola/default_experiment-1-0.arrow.lock
+DEBUG:filelock:Lock 139994235290384 released on /root/autodl-tmp/hf_cache/metrics/glue/cola/default_experiment-1-0.arrow.lock
+100%|██████████| 17/17 [00:03<00:00,  5.35it/s]
+INFO:root:test performance on dataset cola: {'eval_loss': 0.8068, 'eval_model_preparation_time': 0.0039, 'eval_matthews_correlation': 0.3996, 'eval_runtime': 3.3518, 'eval_samples_per_second': 311.18, 'eval_steps_per_second': 5.072}
+/root/autodl-tmp/EMR_Merging/merge_lm/utils/customized_trainers.py:15: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomizedTrainer.__init__`. Use `processing_class` instead.
+  super(CustomizedTrainer, self).__init__(*args, **kwargs)
+INFO:root:perform model merging method emr_merging:
+INFO:root:get performance...
+  0%|          | 0/14 [00:00<?, ?it/s] 36%|███▌      | 5/14 [00:00<00:00, 48.68it/s] 71%|███████▏  | 10/14 [00:00<00:00, 43.80it/s]DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/metrics/evaluate-metric/glue/evaluate-metric/glue.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): hf-mirror.com:443
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /spaces/evaluate-metric/glue/resolve/v0.4.6/glue.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): hf-mirror.com:443
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /spaces/evaluate-metric/glue/resolve/main/glue.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /api/resolve-cache/spaces/evaluate-metric/glue/e1a5d749a1772a37a8b68348d29f314a000d7907/glue.py?%2Fspaces%2Fevaluate-metric%2Fglue%2Fresolve%2Fmain%2Fglue.py=&etag=%228c607bf1e2fef42fa3abcf1c672c90b576e6eef0%22 HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 139994235003296 on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Lock 139994235003296 acquired on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Attempting to release lock 139994235003296 on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Lock 139994235003296 released on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Attempting to acquire lock 139994235300944 on /root/autodl-tmp/hf_cache/metrics/glue/sst2/default_experiment-1-0.arrow.lock
+DEBUG:filelock:Lock 139994235300944 acquired on /root/autodl-tmp/hf_cache/metrics/glue/sst2/default_experiment-1-0.arrow.lock
+DEBUG:fsspec.local:open file: /root/autodl-tmp/hf_cache/metrics/glue/sst2/default_experiment-1-0.arrow
+DEBUG:filelock:Attempting to release lock 139994235300944 on /root/autodl-tmp/hf_cache/metrics/glue/sst2/default_experiment-1-0.arrow.lock
+DEBUG:filelock:Lock 139994235300944 released on /root/autodl-tmp/hf_cache/metrics/glue/sst2/default_experiment-1-0.arrow.lock
+100%|██████████| 14/14 [00:03<00:00,  3.78it/s]
+INFO:root:test performance on dataset sst2: {'eval_loss': 0.2224, 'eval_model_preparation_time': 0.0039, 'eval_accuracy': 0.9335, 'eval_runtime': 3.7332, 'eval_samples_per_second': 233.581, 'eval_steps_per_second': 3.75}
+/root/autodl-tmp/EMR_Merging/merge_lm/utils/customized_trainers.py:15: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomizedTrainer.__init__`. Use `processing_class` instead.
+  super(CustomizedTrainer, self).__init__(*args, **kwargs)
+INFO:root:perform model merging method emr_merging:
+INFO:root:get performance...
+  0%|          | 0/7 [00:00<?, ?it/s] 57%|█████▋    | 4/7 [00:00<00:00, 34.64it/s]DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/metrics/evaluate-metric/glue/evaluate-metric/glue.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): hf-mirror.com:443
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /spaces/evaluate-metric/glue/resolve/v0.4.6/glue.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): hf-mirror.com:443
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /spaces/evaluate-metric/glue/resolve/main/glue.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /api/resolve-cache/spaces/evaluate-metric/glue/e1a5d749a1772a37a8b68348d29f314a000d7907/glue.py?%2Fspaces%2Fevaluate-metric%2Fglue%2Fresolve%2Fmain%2Fglue.py=&etag=%228c607bf1e2fef42fa3abcf1c672c90b576e6eef0%22 HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 139994235305888 on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Lock 139994235305888 acquired on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Attempting to release lock 139994235305888 on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Lock 139994235305888 released on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Attempting to acquire lock 139994233523984 on /root/autodl-tmp/hf_cache/metrics/glue/mrpc/default_experiment-1-0.arrow.lock
+DEBUG:filelock:Lock 139994233523984 acquired on /root/autodl-tmp/hf_cache/metrics/glue/mrpc/default_experiment-1-0.arrow.lock
+DEBUG:fsspec.local:open file: /root/autodl-tmp/hf_cache/metrics/glue/mrpc/default_experiment-1-0.arrow
+DEBUG:filelock:Attempting to release lock 139994233523984 on /root/autodl-tmp/hf_cache/metrics/glue/mrpc/default_experiment-1-0.arrow.lock
+DEBUG:filelock:Lock 139994233523984 released on /root/autodl-tmp/hf_cache/metrics/glue/mrpc/default_experiment-1-0.arrow.lock
+100%|██████████| 7/7 [00:03<00:00,  2.33it/s]
+INFO:root:test performance on dataset mrpc: {'eval_loss': 0.4823, 'eval_model_preparation_time': 0.0039, 'eval_accuracy': 0.8627, 'eval_f1': 0.9034, 'eval_averaged_scores': 0.8831, 'eval_runtime': 3.0457, 'eval_samples_per_second': 133.959, 'eval_steps_per_second': 2.298}
+/root/autodl-tmp/EMR_Merging/merge_lm/utils/customized_trainers.py:15: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomizedTrainer.__init__`. Use `processing_class` instead.
+  super(CustomizedTrainer, self).__init__(*args, **kwargs)
+INFO:root:perform model merging method emr_merging:
+INFO:root:get performance...
+  0%|          | 0/24 [00:00<?, ?it/s] 29%|██▉       | 7/24 [00:00<00:00, 58.41it/s] 54%|█████▍    | 13/24 [00:00<00:00, 41.80it/s] 75%|███████▌  | 18/24 [00:00<00:00, 35.16it/s] 92%|█████████▏| 22/24 [00:00<00:00, 35.56it/s]DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/metrics/evaluate-metric/glue/evaluate-metric/glue.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): hf-mirror.com:443
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /spaces/evaluate-metric/glue/resolve/v0.4.6/glue.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): hf-mirror.com:443
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /spaces/evaluate-metric/glue/resolve/main/glue.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /api/resolve-cache/spaces/evaluate-metric/glue/e1a5d749a1772a37a8b68348d29f314a000d7907/glue.py?%2Fspaces%2Fevaluate-metric%2Fglue%2Fresolve%2Fmain%2Fglue.py=&etag=%228c607bf1e2fef42fa3abcf1c672c90b576e6eef0%22 HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 139994235304352 on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Lock 139994235304352 acquired on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Attempting to release lock 139994235304352 on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Lock 139994235304352 released on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Attempting to acquire lock 139994233533920 on /root/autodl-tmp/hf_cache/metrics/glue/stsb/default_experiment-1-0.arrow.lock
+DEBUG:filelock:Lock 139994233533920 acquired on /root/autodl-tmp/hf_cache/metrics/glue/stsb/default_experiment-1-0.arrow.lock
+DEBUG:fsspec.local:open file: /root/autodl-tmp/hf_cache/metrics/glue/stsb/default_experiment-1-0.arrow
+DEBUG:filelock:Attempting to release lock 139994233533920 on /root/autodl-tmp/hf_cache/metrics/glue/stsb/default_experiment-1-0.arrow.lock
+DEBUG:filelock:Lock 139994233533920 released on /root/autodl-tmp/hf_cache/metrics/glue/stsb/default_experiment-1-0.arrow.lock
+100%|██████████| 24/24 [00:03<00:00,  6.45it/s]
+INFO:root:test performance on dataset stsb: {'eval_loss': 1.006, 'eval_model_preparation_time': 0.0038, 'eval_pearson': 0.8273, 'eval_spearmanr': 0.8282, 'eval_averaged_scores': 0.8277, 'eval_runtime': 3.7488, 'eval_samples_per_second': 400.125, 'eval_steps_per_second': 6.402}
+/root/autodl-tmp/EMR_Merging/merge_lm/utils/customized_trainers.py:15: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomizedTrainer.__init__`. Use `processing_class` instead.
+  super(CustomizedTrainer, self).__init__(*args, **kwargs)
+INFO:root:perform model merging method emr_merging:
+INFO:root:get performance...
+  0%|          | 0/632 [00:00<?, ?it/s]  1%|          | 5/632 [00:00<00:16, 37.55it/s]  1%|▏         | 9/632 [00:00<00:18, 33.43it/s]  2%|▏         | 13/632 [00:00<00:19, 31.53it/s]  3%|▎         | 17/632 [00:00<00:21, 28.93it/s]  3%|▎         | 21/632 [00:00<00:20, 30.12it/s]  4%|▍         | 25/632 [00:00<00:19, 30.70it/s]  5%|▍         | 29/632 [00:00<00:20, 29.74it/s]  5%|▌         | 32/632 [00:01<00:20, 28.95it/s]  6%|▌         | 35/632 [00:01<00:21, 28.38it/s]  6%|▌         | 39/632 [00:01<00:20, 28.82it/s]  7%|▋         | 43/632 [00:01<00:20, 28.69it/s]  7%|▋         | 46/632 [00:01<00:20, 28.59it/s]  8%|▊         | 49/632 [00:01<00:22, 26.15it/s]  8%|▊         | 52/632 [00:01<00:22, 25.94it/s]  9%|▉         | 56/632 [00:01<00:20, 27.61it/s]  9%|▉         | 60/632 [00:02<00:19, 28.97it/s] 10%|█         | 64/632 [00:02<00:19, 29.75it/s] 11%|█         | 67/632 [00:02<00:19, 29.34it/s] 11%|█         | 71/632 [00:02<00:18, 29.55it/s] 12%|█▏        | 75/632 [00:02<00:17, 31.17it/s] 12%|█▎        | 79/632 [00:02<00:18, 30.02it/s] 13%|█▎        | 83/632 [00:02<00:18, 30.07it/s] 14%|█▍        | 87/632 [00:02<00:18, 29.54it/s] 14%|█▍        | 91/632 [00:03<00:17, 30.67it/s] 15%|█▌        | 95/632 [00:03<00:17, 30.49it/s] 16%|█▌        | 99/632 [00:03<00:17, 30.91it/s] 16%|█▋        | 103/632 [00:03<00:16, 31.14it/s] 17%|█▋        | 107/632 [00:03<00:17, 30.76it/s] 18%|█▊        | 111/632 [00:03<00:17, 30.50it/s] 18%|█▊        | 115/632 [00:03<00:16, 31.66it/s] 19%|█▉        | 119/632 [00:03<00:17, 30.00it/s] 19%|█▉        | 123/632 [00:04<00:17, 29.69it/s] 20%|██        | 127/632 [00:04<00:16, 30.32it/s] 21%|██        | 131/632 [00:04<00:15, 31.46it/s] 21%|██▏       | 135/632 [00:04<00:15, 31.57it/s] 22%|██▏       | 139/632 [00:04<00:15, 31.78it/s] 23%|██▎       | 143/632 [00:04<00:16, 30.50it/s] 23%|██▎       | 147/632 [00:04<00:16, 29.94it/s] 24%|██▍       | 151/632 [00:05<00:16, 29.06it/s] 24%|██▍       | 154/632 [00:05<00:16, 28.42it/s] 25%|██▍       | 157/632 [00:05<00:16, 28.18it/s] 25%|██▌       | 160/632 [00:05<00:16, 28.64it/s] 26%|██▌       | 164/632 [00:05<00:16, 29.10it/s] 27%|██▋       | 168/632 [00:05<00:15, 30.73it/s] 27%|██▋       | 172/632 [00:05<00:15, 29.88it/s] 28%|██▊       | 176/632 [00:05<00:14, 30.51it/s] 28%|██▊       | 180/632 [00:06<00:15, 28.99it/s] 29%|██▉       | 183/632 [00:06<00:15, 28.71it/s] 30%|██▉       | 187/632 [00:06<00:15, 29.29it/s] 30%|███       | 191/632 [00:06<00:14, 29.82it/s] 31%|███       | 194/632 [00:06<00:15, 28.57it/s] 31%|███       | 197/632 [00:06<00:15, 28.77it/s] 32%|███▏      | 201/632 [00:06<00:14, 29.47it/s] 32%|███▏      | 205/632 [00:06<00:14, 29.83it/s] 33%|███▎      | 209/632 [00:07<00:13, 30.40it/s] 34%|███▎      | 213/632 [00:07<00:13, 30.28it/s] 34%|███▍      | 217/632 [00:07<00:14, 29.48it/s] 35%|███▍      | 220/632 [00:07<00:14, 28.66it/s] 35%|███▌      | 223/632 [00:07<00:14, 27.82it/s] 36%|███▌      | 226/632 [00:07<00:14, 28.21it/s] 36%|███▌      | 229/632 [00:07<00:14, 28.64it/s] 37%|███▋      | 232/632 [00:07<00:13, 28.77it/s] 37%|███▋      | 235/632 [00:07<00:13, 28.67it/s] 38%|███▊      | 238/632 [00:08<00:13, 28.17it/s] 38%|███▊      | 241/632 [00:08<00:14, 27.34it/s] 39%|███▉      | 245/632 [00:08<00:14, 27.25it/s] 39%|███▉      | 249/632 [00:08<00:13, 27.83it/s] 40%|████      | 253/632 [00:08<00:12, 29.44it/s] 41%|████      | 256/632 [00:08<00:12, 29.53it/s] 41%|████      | 260/632 [00:08<00:12, 30.12it/s] 42%|████▏     | 264/632 [00:08<00:12, 29.98it/s] 42%|████▏     | 267/632 [00:09<00:12, 29.80it/s] 43%|████▎     | 270/632 [00:09<00:12, 29.44it/s] 43%|████▎     | 274/632 [00:09<00:11, 30.52it/s] 44%|████▍     | 278/632 [00:09<00:11, 31.30it/s] 45%|████▍     | 282/632 [00:09<00:11, 30.73it/s] 45%|████▌     | 286/632 [00:09<00:11, 30.99it/s] 46%|████▌     | 290/632 [00:09<00:11, 30.42it/s] 47%|████▋     | 294/632 [00:09<00:10, 30.93it/s] 47%|████▋     | 298/632 [00:10<00:10, 31.64it/s] 48%|████▊     | 302/632 [00:10<00:10, 30.99it/s] 48%|████▊     | 306/632 [00:10<00:10, 30.06it/s] 49%|████▉     | 310/632 [00:10<00:11, 28.56it/s] 50%|████▉     | 314/632 [00:10<00:10, 29.37it/s] 50%|█████     | 318/632 [00:10<00:10, 29.47it/s] 51%|█████     | 322/632 [00:10<00:10, 30.04it/s] 52%|█████▏    | 326/632 [00:10<00:10, 30.17it/s] 52%|█████▏    | 330/632 [00:11<00:09, 30.42it/s] 53%|█████▎    | 334/632 [00:11<00:10, 29.78it/s] 53%|█████▎    | 338/632 [00:11<00:09, 29.61it/s] 54%|█████▍    | 342/632 [00:11<00:09, 31.50it/s] 55%|█████▍    | 346/632 [00:11<00:08, 32.29it/s] 55%|█████▌    | 350/632 [00:11<00:08, 31.52it/s] 56%|█████▌    | 354/632 [00:11<00:08, 31.37it/s] 57%|█████▋    | 358/632 [00:12<00:08, 30.81it/s] 57%|█████▋    | 362/632 [00:12<00:09, 29.75it/s] 58%|█████▊    | 365/632 [00:12<00:09, 29.66it/s] 58%|█████▊    | 368/632 [00:12<00:08, 29.66it/s] 59%|█████▊    | 371/632 [00:12<00:08, 29.65it/s] 59%|█████▉    | 375/632 [00:12<00:08, 30.79it/s] 60%|█████▉    | 379/632 [00:12<00:08, 29.75it/s] 61%|██████    | 383/632 [00:12<00:08, 30.39it/s] 61%|██████    | 387/632 [00:12<00:07, 30.63it/s] 62%|██████▏   | 391/632 [00:13<00:07, 30.13it/s] 62%|██████▎   | 395/632 [00:13<00:08, 29.58it/s] 63%|██████▎   | 399/632 [00:13<00:07, 29.80it/s] 64%|██████▎   | 402/632 [00:13<00:07, 29.83it/s] 64%|██████▍   | 406/632 [00:13<00:07, 29.82it/s] 65%|██████▍   | 410/632 [00:13<00:07, 30.44it/s] 66%|██████▌   | 414/632 [00:13<00:07, 29.58it/s] 66%|██████▌   | 417/632 [00:13<00:07, 29.33it/s] 66%|██████▋   | 420/632 [00:14<00:07, 29.33it/s] 67%|██████▋   | 424/632 [00:14<00:06, 31.31it/s] 68%|██████▊   | 428/632 [00:14<00:06, 31.54it/s] 68%|██████▊   | 432/632 [00:14<00:06, 30.98it/s] 69%|██████▉   | 436/632 [00:14<00:06, 30.15it/s] 70%|██████▉   | 440/632 [00:14<00:06, 30.18it/s] 70%|███████   | 444/632 [00:14<00:06, 30.48it/s] 71%|███████   | 448/632 [00:15<00:06, 29.23it/s] 71%|███████▏  | 451/632 [00:15<00:06, 28.81it/s] 72%|███████▏  | 454/632 [00:15<00:06, 28.08it/s] 72%|███████▏  | 458/632 [00:15<00:06, 28.58it/s] 73%|███████▎  | 461/632 [00:15<00:06, 27.28it/s] 73%|███████▎  | 464/632 [00:15<00:06, 27.92it/s] 74%|███████▍  | 468/632 [00:15<00:05, 28.77it/s] 75%|███████▍  | 472/632 [00:15<00:05, 29.68it/s] 75%|███████▌  | 476/632 [00:15<00:05, 30.45it/s] 76%|███████▌  | 480/632 [00:16<00:04, 30.72it/s] 77%|███████▋  | 484/632 [00:16<00:04, 30.82it/s] 77%|███████▋  | 488/632 [00:16<00:04, 29.82it/s] 78%|███████▊  | 491/632 [00:16<00:04, 29.60it/s] 78%|███████▊  | 494/632 [00:16<00:04, 29.04it/s] 79%|███████▉  | 498/632 [00:16<00:04, 30.33it/s] 79%|███████▉  | 502/632 [00:16<00:04, 28.40it/s] 80%|███████▉  | 505/632 [00:16<00:04, 27.84it/s] 81%|████████  | 509/632 [00:17<00:04, 28.74it/s] 81%|████████  | 512/632 [00:17<00:04, 27.76it/s] 82%|████████▏ | 516/632 [00:17<00:03, 29.01it/s] 82%|████████▏ | 520/632 [00:17<00:03, 31.17it/s] 83%|████████▎ | 524/632 [00:17<00:03, 30.58it/s] 84%|████████▎ | 528/632 [00:17<00:03, 30.84it/s] 84%|████████▍ | 532/632 [00:17<00:03, 32.12it/s] 85%|████████▍ | 536/632 [00:17<00:02, 32.60it/s] 85%|████████▌ | 540/632 [00:18<00:02, 31.18it/s] 86%|████████▌ | 544/632 [00:18<00:02, 31.09it/s] 87%|████████▋ | 548/632 [00:18<00:02, 30.48it/s] 87%|████████▋ | 552/632 [00:18<00:02, 29.86it/s] 88%|████████▊ | 555/632 [00:18<00:02, 29.71it/s] 88%|████████▊ | 559/632 [00:18<00:02, 29.48it/s] 89%|████████▉ | 562/632 [00:18<00:02, 29.35it/s] 89%|████████▉ | 565/632 [00:18<00:02, 28.18it/s] 90%|█████████ | 569/632 [00:19<00:02, 29.37it/s] 91%|█████████ | 572/632 [00:19<00:02, 29.08it/s] 91%|█████████ | 576/632 [00:19<00:01, 28.93it/s] 92%|█████████▏| 580/632 [00:19<00:01, 29.34it/s] 92%|█████████▏| 583/632 [00:19<00:01, 29.47it/s] 93%|█████████▎| 586/632 [00:19<00:01, 29.33it/s] 93%|█████████▎| 589/632 [00:19<00:01, 27.20it/s] 94%|█████████▍| 593/632 [00:19<00:01, 28.66it/s] 94%|█████████▍| 596/632 [00:20<00:01, 27.98it/s] 95%|█████████▍| 599/632 [00:20<00:01, 27.46it/s] 95%|█████████▌| 603/632 [00:20<00:01, 28.78it/s] 96%|█████████▌| 606/632 [00:20<00:00, 28.74it/s] 96%|█████████▋| 609/632 [00:20<00:00, 28.55it/s] 97%|█████████▋| 613/632 [00:20<00:00, 30.01it/s] 98%|█████████▊| 617/632 [00:20<00:00, 31.72it/s] 98%|█████████▊| 621/632 [00:20<00:00, 29.88it/s] 99%|█████████▉| 625/632 [00:21<00:00, 29.60it/s]100%|█████████▉| 629/632 [00:21<00:00, 29.33it/s]DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/metrics/evaluate-metric/glue/evaluate-metric/glue.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): hf-mirror.com:443
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /spaces/evaluate-metric/glue/resolve/v0.4.6/glue.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): hf-mirror.com:443
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /spaces/evaluate-metric/glue/resolve/main/glue.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /api/resolve-cache/spaces/evaluate-metric/glue/e1a5d749a1772a37a8b68348d29f314a000d7907/glue.py?%2Fspaces%2Fevaluate-metric%2Fglue%2Fresolve%2Fmain%2Fglue.py=&etag=%228c607bf1e2fef42fa3abcf1c672c90b576e6eef0%22 HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 139994233532912 on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Lock 139994233532912 acquired on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Attempting to release lock 139994233532912 on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Lock 139994233532912 released on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Attempting to acquire lock 139994233611568 on /root/autodl-tmp/hf_cache/metrics/glue/qqp/default_experiment-1-0.arrow.lock
+DEBUG:filelock:Lock 139994233611568 acquired on /root/autodl-tmp/hf_cache/metrics/glue/qqp/default_experiment-1-0.arrow.lock
+DEBUG:fsspec.local:open file: /root/autodl-tmp/hf_cache/metrics/glue/qqp/default_experiment-1-0.arrow
+DEBUG:filelock:Attempting to release lock 139994233611568 on /root/autodl-tmp/hf_cache/metrics/glue/qqp/default_experiment-1-0.arrow.lock
+DEBUG:filelock:Lock 139994233611568 released on /root/autodl-tmp/hf_cache/metrics/glue/qqp/default_experiment-1-0.arrow.lock
+100%|██████████| 632/632 [00:23<00:00, 26.92it/s]
+INFO:root:test performance on dataset qqp: {'eval_loss': 0.664, 'eval_model_preparation_time': 0.004, 'eval_accuracy': 0.8972, 'eval_f1': 0.8628, 'eval_averaged_scores': 0.88, 'eval_runtime': 23.5258, 'eval_samples_per_second': 1718.54, 'eval_steps_per_second': 26.864}
+/root/autodl-tmp/EMR_Merging/merge_lm/utils/customized_trainers.py:15: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomizedTrainer.__init__`. Use `processing_class` instead.
+  super(CustomizedTrainer, self).__init__(*args, **kwargs)
+INFO:root:perform model merging method emr_merging:
+INFO:root:get performance...
+  0%|          | 0/154 [00:00<?, ?it/s]  3%|▎         | 4/154 [00:00<00:04, 36.68it/s]  5%|▌         | 8/154 [00:00<00:05, 27.96it/s]  7%|▋         | 11/154 [00:00<00:05, 26.11it/s]  9%|▉         | 14/154 [00:00<00:05, 25.46it/s] 11%|█         | 17/154 [00:00<00:05, 25.61it/s] 13%|█▎        | 20/154 [00:00<00:05, 24.59it/s] 15%|█▍        | 23/154 [00:00<00:05, 24.25it/s] 17%|█▋        | 26/154 [00:01<00:05, 23.92it/s] 19%|█▉        | 29/154 [00:01<00:05, 23.77it/s] 21%|██        | 32/154 [00:01<00:05, 23.76it/s] 23%|██▎       | 35/154 [00:01<00:05, 23.48it/s] 25%|██▍       | 38/154 [00:01<00:04, 24.14it/s] 27%|██▋       | 41/154 [00:01<00:04, 23.90it/s] 29%|██▊       | 44/154 [00:01<00:04, 23.34it/s] 31%|███       | 47/154 [00:01<00:04, 23.73it/s] 32%|███▏      | 50/154 [00:02<00:04, 23.04it/s] 34%|███▍      | 53/154 [00:02<00:04, 23.24it/s] 36%|███▋      | 56/154 [00:02<00:04, 21.95it/s] 38%|███▊      | 59/154 [00:02<00:04, 22.53it/s] 40%|████      | 62/154 [00:02<00:03, 23.22it/s] 42%|████▏     | 65/154 [00:02<00:03, 23.04it/s] 44%|████▍     | 68/154 [00:02<00:03, 22.85it/s] 46%|████▌     | 71/154 [00:02<00:03, 22.89it/s] 48%|████▊     | 74/154 [00:03<00:03, 22.46it/s] 50%|█████     | 77/154 [00:03<00:03, 22.36it/s] 52%|█████▏    | 80/154 [00:03<00:03, 22.73it/s] 54%|█████▍    | 83/154 [00:03<00:03, 23.09it/s] 56%|█████▌    | 86/154 [00:03<00:02, 23.96it/s] 58%|█████▊    | 89/154 [00:03<00:02, 24.07it/s] 60%|█████▉    | 92/154 [00:03<00:02, 23.74it/s] 62%|██████▏   | 95/154 [00:03<00:02, 23.94it/s] 64%|██████▎   | 98/154 [00:04<00:02, 23.28it/s] 66%|██████▌   | 101/154 [00:04<00:02, 23.11it/s] 68%|██████▊   | 104/154 [00:04<00:02, 22.59it/s] 69%|██████▉   | 107/154 [00:04<00:02, 22.04it/s] 71%|███████▏  | 110/154 [00:04<00:01, 22.14it/s] 73%|███████▎  | 113/154 [00:04<00:01, 22.50it/s] 75%|███████▌  | 116/154 [00:04<00:01, 22.27it/s] 77%|███████▋  | 119/154 [00:05<00:01, 22.18it/s] 79%|███████▉  | 122/154 [00:05<00:01, 22.39it/s] 81%|████████  | 125/154 [00:05<00:01, 22.71it/s] 83%|████████▎ | 128/154 [00:05<00:01, 22.05it/s] 85%|████████▌ | 131/154 [00:05<00:01, 22.30it/s] 87%|████████▋ | 134/154 [00:05<00:00, 22.70it/s] 89%|████████▉ | 137/154 [00:05<00:00, 23.37it/s] 91%|█████████ | 140/154 [00:06<00:00, 22.93it/s] 93%|█████████▎| 143/154 [00:06<00:00, 23.85it/s] 95%|█████████▍| 146/154 [00:06<00:00, 25.04it/s] 97%|█████████▋| 149/154 [00:06<00:00, 24.60it/s] 99%|█████████▊| 152/154 [00:06<00:00, 24.41it/s]DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/metrics/evaluate-metric/glue/evaluate-metric/glue.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): hf-mirror.com:443
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /spaces/evaluate-metric/glue/resolve/v0.4.6/glue.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): hf-mirror.com:443
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /spaces/evaluate-metric/glue/resolve/main/glue.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /api/resolve-cache/spaces/evaluate-metric/glue/e1a5d749a1772a37a8b68348d29f314a000d7907/glue.py?%2Fspaces%2Fevaluate-metric%2Fglue%2Fresolve%2Fmain%2Fglue.py=&etag=%228c607bf1e2fef42fa3abcf1c672c90b576e6eef0%22 HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 139994233528208 on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Lock 139994233528208 acquired on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Attempting to release lock 139994233528208 on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Lock 139994233528208 released on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Attempting to acquire lock 139994233528352 on /root/autodl-tmp/hf_cache/metrics/glue/mnli/default_experiment-1-0.arrow.lock
+DEBUG:filelock:Lock 139994233528352 acquired on /root/autodl-tmp/hf_cache/metrics/glue/mnli/default_experiment-1-0.arrow.lock
+DEBUG:fsspec.local:open file: /root/autodl-tmp/hf_cache/metrics/glue/mnli/default_experiment-1-0.arrow
+DEBUG:filelock:Attempting to release lock 139994233528352 on /root/autodl-tmp/hf_cache/metrics/glue/mnli/default_experiment-1-0.arrow.lock
+DEBUG:filelock:Lock 139994233528352 released on /root/autodl-tmp/hf_cache/metrics/glue/mnli/default_experiment-1-0.arrow.lock
+100%|██████████| 154/154 [00:09<00:00, 16.81it/s]
+INFO:root:test performance on dataset mnli: {'eval_loss': 0.9276, 'eval_model_preparation_time': 0.0032, 'eval_accuracy': 0.8545, 'eval_runtime': 9.2186, 'eval_samples_per_second': 1064.698, 'eval_steps_per_second': 16.705}
+/root/autodl-tmp/EMR_Merging/merge_lm/utils/customized_trainers.py:15: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomizedTrainer.__init__`. Use `processing_class` instead.
+  super(CustomizedTrainer, self).__init__(*args, **kwargs)
+INFO:root:perform model merging method emr_merging:
+INFO:root:get performance...
+  0%|          | 0/86 [00:00<?, ?it/s]  5%|▍         | 4/86 [00:00<00:02, 29.07it/s]  8%|▊         | 7/86 [00:00<00:03, 23.80it/s] 12%|█▏        | 10/86 [00:00<00:03, 22.40it/s] 15%|█▌        | 13/86 [00:00<00:03, 21.35it/s] 19%|█▊        | 16/86 [00:00<00:03, 21.49it/s] 22%|██▏       | 19/86 [00:00<00:03, 21.33it/s] 26%|██▌       | 22/86 [00:01<00:03, 21.21it/s] 29%|██▉       | 25/86 [00:01<00:02, 21.18it/s] 33%|███▎      | 28/86 [00:01<00:02, 21.56it/s] 36%|███▌      | 31/86 [00:01<00:02, 20.68it/s] 40%|███▉      | 34/86 [00:01<00:02, 20.34it/s] 43%|████▎     | 37/86 [00:01<00:02, 20.27it/s] 47%|████▋     | 40/86 [00:01<00:02, 19.80it/s] 50%|█████     | 43/86 [00:02<00:02, 20.41it/s] 53%|█████▎    | 46/86 [00:02<00:01, 20.72it/s] 57%|█████▋    | 49/86 [00:02<00:01, 20.24it/s] 60%|██████    | 52/86 [00:02<00:01, 19.94it/s] 64%|██████▍   | 55/86 [00:02<00:01, 19.67it/s] 67%|██████▋   | 58/86 [00:02<00:01, 19.99it/s] 71%|███████   | 61/86 [00:02<00:01, 20.34it/s] 74%|███████▍  | 64/86 [00:03<00:01, 20.63it/s] 78%|███████▊  | 67/86 [00:03<00:00, 20.60it/s] 81%|████████▏ | 70/86 [00:03<00:00, 21.25it/s] 85%|████████▍ | 73/86 [00:03<00:00, 20.59it/s] 88%|████████▊ | 76/86 [00:03<00:00, 20.79it/s] 92%|█████████▏| 79/86 [00:03<00:00, 20.82it/s] 95%|█████████▌| 82/86 [00:03<00:00, 20.37it/s] 99%|█████████▉| 85/86 [00:04<00:00, 20.90it/s]DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/metrics/evaluate-metric/glue/evaluate-metric/glue.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): hf-mirror.com:443
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /spaces/evaluate-metric/glue/resolve/v0.4.6/glue.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): hf-mirror.com:443
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /spaces/evaluate-metric/glue/resolve/main/glue.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /api/resolve-cache/spaces/evaluate-metric/glue/e1a5d749a1772a37a8b68348d29f314a000d7907/glue.py?%2Fspaces%2Fevaluate-metric%2Fglue%2Fresolve%2Fmain%2Fglue.py=&etag=%228c607bf1e2fef42fa3abcf1c672c90b576e6eef0%22 HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 139994235301952 on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Lock 139994235301952 acquired on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Attempting to release lock 139994235301952 on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Lock 139994235301952 released on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Attempting to acquire lock 139994233526336 on /root/autodl-tmp/hf_cache/metrics/glue/qnli/default_experiment-1-0.arrow.lock
+DEBUG:filelock:Lock 139994233526336 acquired on /root/autodl-tmp/hf_cache/metrics/glue/qnli/default_experiment-1-0.arrow.lock
+DEBUG:fsspec.local:open file: /root/autodl-tmp/hf_cache/metrics/glue/qnli/default_experiment-1-0.arrow
+DEBUG:filelock:Attempting to release lock 139994233526336 on /root/autodl-tmp/hf_cache/metrics/glue/qnli/default_experiment-1-0.arrow.lock
+DEBUG:filelock:Lock 139994233526336 released on /root/autodl-tmp/hf_cache/metrics/glue/qnli/default_experiment-1-0.arrow.lock
+100%|██████████| 86/86 [00:06<00:00, 13.39it/s]
+INFO:root:test performance on dataset qnli: {'eval_loss': 0.2574, 'eval_model_preparation_time': 0.0032, 'eval_accuracy': 0.8957, 'eval_runtime': 6.4826, 'eval_samples_per_second': 842.718, 'eval_steps_per_second': 13.266}
+/root/autodl-tmp/EMR_Merging/merge_lm/utils/customized_trainers.py:15: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomizedTrainer.__init__`. Use `processing_class` instead.
+  super(CustomizedTrainer, self).__init__(*args, **kwargs)
+INFO:root:perform model merging method emr_merging:
+INFO:root:get performance...
+  0%|          | 0/5 [00:00<?, ?it/s] 60%|██████    | 3/5 [00:00<00:00, 27.91it/s]DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/metrics/evaluate-metric/glue/evaluate-metric/glue.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): hf-mirror.com:443
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /spaces/evaluate-metric/glue/resolve/v0.4.6/glue.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): hf-mirror.com:443
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /spaces/evaluate-metric/glue/resolve/main/glue.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /api/resolve-cache/spaces/evaluate-metric/glue/e1a5d749a1772a37a8b68348d29f314a000d7907/glue.py?%2Fspaces%2Fevaluate-metric%2Fglue%2Fresolve%2Fmain%2Fglue.py=&etag=%228c607bf1e2fef42fa3abcf1c672c90b576e6eef0%22 HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 139994235295088 on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Lock 139994235295088 acquired on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Attempting to release lock 139994235295088 on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Lock 139994235295088 released on /root/autodl-tmp/hf_cache/modules/evaluate_modules/metrics/evaluate-metric--glue.lock
+DEBUG:filelock:Attempting to acquire lock 139994233610608 on /root/autodl-tmp/hf_cache/metrics/glue/rte/default_experiment-1-0.arrow.lock
+DEBUG:filelock:Lock 139994233610608 acquired on /root/autodl-tmp/hf_cache/metrics/glue/rte/default_experiment-1-0.arrow.lock
+DEBUG:fsspec.local:open file: /root/autodl-tmp/hf_cache/metrics/glue/rte/default_experiment-1-0.arrow
+DEBUG:filelock:Attempting to release lock 139994233610608 on /root/autodl-tmp/hf_cache/metrics/glue/rte/default_experiment-1-0.arrow.lock
+DEBUG:filelock:Lock 139994233610608 released on /root/autodl-tmp/hf_cache/metrics/glue/rte/default_experiment-1-0.arrow.lock
+100%|██████████| 5/5 [00:03<00:00,  1.47it/s]
+INFO:root:test performance on dataset rte: {'eval_loss': 0.5376, 'eval_model_preparation_time': 0.0031, 'eval_accuracy': 0.7437, 'eval_runtime': 3.4577, 'eval_samples_per_second': 80.11, 'eval_steps_per_second': 1.446}
