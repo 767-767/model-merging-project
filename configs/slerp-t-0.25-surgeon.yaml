@@ -1,0 +1,16 @@
+
+slices:
+  - sources:
+      - model: ./math_expert_with_code_tokenizer
+        layer_range: [0, 32]
+      - model: beowolx/CodeNinja-1.0-OpenChat-7B
+        layer_range: [0, 32]
+
+merge_method: slerp
+base_model: ./math_expert_with_code_tokenizer
+
+parameters:
+  t:
+    - value: 0.25
+
+dtype: float16

@@ -21,6 +21,9 @@ math_expert_with_code_tokenizer/
 merged_task_arith_surgeon/
 merged_ties_corrected/
 merged_ties_new_base/
+merged_slerp_05/
+merged_slerp_025_surgeon/
+merged_slerp_075_surgeon/
 
 # Python 缓存
 __pycache__/
