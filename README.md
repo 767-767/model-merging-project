@@ -37,31 +37,54 @@ mergekit-yaml configs/slerp-experts.yaml ./merged_experts --cuda
 
 ## Level 2: EMR-Merging 复现
 
-跑通EMR-Merging (NeurIPS 2024)，在MNIST和SVHN上分别验证了ViT-B-32, ViT-B-16和ViT-L-14在论文报告中的性能。
+跑通EMR-Merging (NeurIPS 2024)，在视觉（ViT）和自然语言处理（RoBERTa、GPT-2）两个领域多个任务上验证了论文报告的性能。
 
 ### 核心修改说明
 
-- `src/main_emr_merging.py`：移除了原代码中对 ViT-B-32 的硬编码，通过 argparse 引入 --model 参数，支持通过命令行参数灵活切换 ViT-B-32, ViT-B-16, ViT-L-14 等不同架构的模型。
+- **动态模型参数**：`src/main_emr_merging.py` 中移除对 `ViT-B-32` 的硬编码，通过 `argparse` 引入 `--model` 参数，支持 `ViT-B-32`、`ViT-B-16`、`ViT-L-14` 等架构灵活切换。
+- **环境兼容性修复**：修改 `task_vectors.py` 中的 `torch.load` 加载方式，增加 `map_location='cpu'` 及 `state_dict` 适配，解决跨环境加载权重时的 `ModuleNotFoundError: No module named 'src'` 问题。
+- **评估列表命令行覆盖**：支持通过 `--train-dataset` 参数动态覆盖 `eval_datasets` 列表，便于快速验证单个或部分数据集。
 
 ### 文件结构
 
 ```bash
-EMR_Merging/merge_vit/src/
-├── home/                    # 运行时资源目录
-│   └── emr-merging/         
-│        ├── data/           # 数据集文件
-│        ├── checkpoints/    # 各架构模型权重
-│        └── logs            # 测试结果日志    
-├── main_emr_merging.py      # 核心入口
-├── task_vectors.py          # 任务向量计算与合并算子
-├── utils.py                 # 数据与权重路径管理          
-└── ...
+EMR_Merging/
+├── merge_vit/                              # ViT实验
+│   ├── src/
+│   │   ├── home/
+│   │   │   └── emr-merging/         
+│   │   │       ├── data/                   # 数据集
+│   │   │       ├── checkpoints/            # 各架构模型权重 (ViT-B-32、B-16、L-14)
+│   │   │       └── logs/                   # 测试结果日志
+│   │   ├── main_emr_merging.py             # 核心入口
+│   │   ├── task_vectors.py                 # 任务向量计算与合并算子
+│   │   └── ...
+│   └── ...
+│
+└── merge_lm/                               # NLP实验
+    ├── merge_roberta_glue.py               # RoBERTa GLUE 实验入口
+    ├── merge_gpt_glue.py                   # GPT-2 GLUE 实验入口
+    ├── ckpts/                              # 模型权重目录 (RoBERTa和GPT-2)
+    ├── save_merge_logs/                    # 实验结果日志
+    │   └── emr-merging/
+    │       ├── gpt2/                       # GPT-2实验日志
+    │       └── roberta-base/               # RoBERTa实验日志
+    └── ...
 ```
 
 ### 运行示例
-在 merge_vit 目录下，使用以下命令对指定模型及数据集进行验证
+ViT实验：在merge_vit/目录下
 
 ```bash
 # 示例：使用 ViT-B-16 在 SVHN 数据集上验证
 python -m src.main_emr_merging --model ViT-B-16 --train-dataset SVHN
+```
+NLP实验：在merge_lm/目录下
+
+```bash
+# RoBERTa 实验（8 个 GLUE 任务）
+python merge_roberta_glue.py --gpu 0
+
+# GPT-2 实验（7 个 GLUE 任务）
+python merge_gpt_glue.py --gpu 0
 ```
