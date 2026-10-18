@@ -88,3 +88,7 @@ python merge_roberta_glue.py --gpu 0
 # GPT-2 实验（7 个 GLUE 任务）
 python merge_gpt_glue.py --gpu 0
 ```
+
+## 项目报告
+
+[查看完整课程项目报告](./report.pdf)
